@@ -1,0 +1,372 @@
+:root {
+  --main-color: #414641;
+  --secondary-color: #4c514c;
+  --alt-color: #7a8a80;
+  --background-color: #f4f6f3;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Utilidades */
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+body {
+  font-family: "Reem Kufi Fun", sans-serif;
+}
+
+h1 {
+  color: var(--main-color);
+  font-size: 78px;
+  font-weight: 400;
+  letter-spacing: 10px;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+/* Sección hero (header / nav) */
+
+header {
+  margin: 20px;
+  width: calc(100% - 40px);
+  height: calc(100vh - 40px);
+  background-image: url("https://admincontent.bimobject.com/public/topbanner/805c168b-ea2e-4e37-8721-0457acf14e2f?ver=1654865658");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+@media (max-width: 480px) {
+  header {
+    margin: 10px;
+    width: calc(100% - 20px);
+    height: calc(100vh - 20px);
+    background-position: center bottom;
+  }
+}
+
+.header-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header p {
+  color: var(--secondary-color);
+  font-size: 24px;
+}
+
+.underline {
+  width: 7%;
+  height: 5px;
+  background-color: var(--alt-color);
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.desktop-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px 0 40px;
+}
+
+@media (max-width: 480px) {
+  .desktop-menu {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .mobile-menu {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+}
+
+.nav-small {
+  font-size: 10px;
+}
+
+.nav-small a {
+  margin-left: 15px;
+}
+
+.btn {
+  border: 2px solid var(--secondary-color);
+  padding: 5px 10px;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+/* Seccion de articulos */
+main {
+  background-color: var(--background-color);
+  padding-top: 115px;
+}
+
+@media(max-width: 480px){
+  main .uppercase h2{
+    font-size: 45px;
+  }
+
+  main{
+    padding-top: 20px;
+  }
+}
+
+
+main div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  width: 100%;
+  height: 300px;
+  background-color: #fff;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.article-image {
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 480px){
+  .article-image {
+    margin-top: 15px;
+    width: 100%;
+    height: 70%;
+  }
+}
+
+.article-image img {
+  width: 170%;
+}
+
+@media (max-width: 480px){
+  .article-image img {
+    width: 140%;
+  }
+}
+
+.article-content {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+
+@media(max-width: 480px){
+  .article-content p{
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px){
+  .article-content{
+    height: 50%;
+  }
+}
+
+.cards-container {
+  display: flex;
+  gap: 15px;
+  width: 60%;
+  margin: 40px auto 0 auto;
+}
+
+@media (max-width: 480px) {
+  .cards-container {
+    display: block;
+    width: 90%;
+  }
+}
+
+/* Sección acerca de ... */
+
+.about-section {
+  display: flex;
+}
+
+@media(max-width: 480px){
+  .about-section{
+    flex-direction: column;
+  }
+}
+
+.about-section > div {
+  width: 50%;
+}
+
+@media(max-width: 480px){
+  .about-section > div {
+    width: 100%;
+  }
+}
+
+.about-image {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/520bc04fe4b03863c7f8a659/1505965654689-F8EUX5I1PDVT66SJ0UU8/spiritual+gifts.jpg?format=2500w");
+  background-size: cover;
+  background-position: center bottom;
+}
+
+@media(max-width: 480px){
+  .about-image{
+    height: 300px;
+    width: 100%;
+  }
+}
+
+.about-content {
+  padding: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media(max-width: 480px){
+  .about-content{
+   padding: 50px 35px;
+   text-align: justify;
+  }
+
+  .about-content h2{
+    font-size: 40px;
+   }
+}
+/* seccion formulario */
+
+
+.form-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 370px;
+  background-color: #e1e6e0;
+  text-align: center;
+}
+
+.form-content h2{
+  margin: 0;
+}
+
+.form-content:first-child{
+  width: 100%;
+  margin-bottom: 4px;
+  outline: none;
+}
+
+form {
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  form input{
+    width: 95%;
+    height: 40px;
+  }
+}
+
+.form-content .submit{
+  margin-top: 10px;
+}
+
+
+
+.form-content input:first-child{
+  border-radius: 0;
+  outline: none;
+  border: none;
+}
+
+.form-content input:last-child{
+ border: 1px solid black;
+}
+
+@media (max-width: 480px){
+  .form-content input:last-child{
+    border: solid #7a8a80;
+    font-size: 15px;
+  }
+}
+/* this the footer */
+
+footer{
+height: 130px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+@media (max-width: 480px) {
+  footer{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+
+.icons-footer i{
+  margin: 6px;
+}
+
+@media(max-width: 480px){
+  .info-footer ul {
+    padding: 0;
+    
+  }
+}
+
+.info-footer ul li{
+  display: inline;
+  margin-right: 5px;
+  padding-right: 7px;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media(max-width: 480px){
+  .info-footer ul li{
+    width: 100%;
+    display: flex;
+    margin: 10px;
+    padding: 0;
+    text-align: center;
+  }
+}
